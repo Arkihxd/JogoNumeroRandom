@@ -17,10 +17,10 @@
 
 ### Imagens do programa em funcionamento
 
-* Menu Inicial
+#### Menu Inicial
 ![img](https://i.imgur.com/TVpofoA.png)
 
-* Opção 1
+#### Opção 1
 ![img](https://i.imgur.com/tBIpP4O.png)
 
 ![img](https://i.imgur.com/ZnxKAYF.png)
@@ -31,5 +31,5 @@
 
 ![img](https://i.imgur.com/O3ErDm0.png)
 
-* Ranking
+#### Ranking
 ![img](https://i.imgur.com/zFqREIx.png)
