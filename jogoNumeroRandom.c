@@ -20,7 +20,6 @@ int main(){
 	// Loop principal
 
 	do{
-
 		printf("(1) - Jogar \n");
 		printf("(2) - Ranking \n");
 		printf("(3) - Sair \n");
@@ -34,29 +33,29 @@ int main(){
 			fflush(stdin);
 			gets(nome);
 
-			// Inicia o gerador de n�meros aleat�rios
+			// Inicia o gerador de numero aleatorio
 			srand(time(NULL));
 
-			// Inicaliza as vari�veis
-			acertou = 0;			// Verifica se o jogador acertou o n�mero
+			// Inicaliza as variaveis
+			acertou = 0;			// Verifica se o jogador acertou o numero
 			tentativas = 0;			// Total de tentativas
 			limite_inferior = 0;	// Limite inferior
 			limite_superior = 101;	// Limite superior
-			n = (rand() % 100) + 1; // N�mero gerado aleatoriamente
+			n = (rand() % 100) + 1; // Numero gerado aleatoriamente
 
 			do{
 				// Limpa a tela
 				system("cls");
 
-				// Imprime o total de tentativas e pede um n�mero ao jogador
+				// Imprime o total de tentativas e pede um numero ao jogador
 				printf("Total de tentativas: %d\n", tentativas);
 				printf("Digite um numero(Esta entre %d e %d): ", limite_inferior, limite_superior);
 				scanf("%d", &x);
 
-				// Aumenta em 1 o n�mero de tentativas
+				// Aumenta em 1 o numero de tentativas
 				tentativas++;
 
-				// Verifica se o jogador ganhou ou diminui os limites ao redor do n�mero
+				// Verifica se o jogador ganhou ou diminui os limites ao redor do numero
 				if (x > n){
 					limite_superior = x;
 				}
@@ -112,6 +111,7 @@ int main(){
 			fclose(fp);
 
 			// Ordena
+			printf("\t\t\tRanking\n");
 			for (a = 0; a < total; a++){
 				for (b = a; b < total; b++){
 					if (rank[a].tentativas > rank[b].tentativas){
@@ -120,14 +120,14 @@ int main(){
 						rank[b] = z;
 					}
 				}
-
-				printf("\nNome:%s\t    Tentativa:%i\t  	  Numero:%i\n", rank[a].nome, rank[a].tentativas, rank[a].numero);
+				printf("\nNome:%s\t    Tentativa:%i\t  	  Numero:%i\n\n", rank[a].nome, rank[a].tentativas, rank[a].numero);
 			}
 		}
 
 		else if (opcao == 3){
 			system("cls");
 			printf("Fim do programa");
+			return 0;
 		}
 
 	} while (op != 3);
